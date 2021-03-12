@@ -8,12 +8,14 @@ request('https://github.com/code-reaper08/docgen-x/blob/main/README.md', (error,
         const links = [];
         linkObjects.each((index, element) => {
             links.push({
-              text: $(element).text(), 
+            //   text: $(element).text(), 
               href: $(element).attr('href'),
             });
           });
-      
-          console.log(links);
+        //   const len = links.length;
+        //   console.log(len);
+        //   console.log(links);
+          console.log(links[8]);
     }
 });
 
