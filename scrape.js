@@ -1,10 +1,10 @@
 const request = require('request');
 const cheerio = require('cheerio');
 
-request('https://github.com/code-reaper08/GameBoy-Adventures/blob/main/README.md', (error,response,html) =>{
+request('https://github.com/code-reaper08/docgen-x/blob/main/README.md', (error,response,html) =>{
     if(!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
-        const linkObjects = $('#readme > article').find('a');
+        const linkObjects = $('#readme > article').children('p' , 'h' , 'pre').find('a');
         const links = [];
         linkObjects.each((index, element) => {
             links.push({
