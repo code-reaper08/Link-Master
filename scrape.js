@@ -4,7 +4,7 @@ const cheerio = require('cheerio');
 request('https://github.com/code-reaper08/markdownpedia/blob/main/README.md', (error,response,html) =>{
     if(!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
-        const linkObjects = $('#readme > article').children('p' , 'h' , 'li').find('a');
+        const linkObjects = $('#readme > article').children().find('a');
         const links = [];
         linkObjects.each((index, element) => {
             links.push({
@@ -22,7 +22,7 @@ request('https://github.com/code-reaper08/markdownpedia/blob/main/README.md', (e
 
 
 
-//comments must be removed
+
 
 
 
