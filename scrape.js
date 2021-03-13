@@ -1,7 +1,7 @@
 const request = require('request');
 const cheerio = require('cheerio');
 
-request('https://github.com/code-reaper08/markdownpedia/blob/main/README.md', (error,response,html) =>{
+request('https://github.com/whatwg/html/blob/main/README.md', (error,response,html) =>{
     if(!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
         const linkObjects = $('#readme > article').children().find('a');
