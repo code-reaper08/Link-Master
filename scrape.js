@@ -1,28 +1,28 @@
 const request = require('request');
 const cheerio = require('cheerio');
 
-request('https://github.com/code-reaper08/docgen-x/blob/main/README.md', (error,response,html) =>{
+request('https://github.com/code-reaper08/markdownpedia/blob/main/README.md', (error,response,html) =>{
     if(!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
-        const linkObjects = $('#readme > article').children('p' , 'h' , 'pre').find('a');
+        const linkObjects = $('#readme > article').children('p' , 'h' , 'li').find('a');
         const links = [];
         linkObjects.each((index, element) => {
             links.push({
-            //   text: $(element).text(), 
+              text: $(element).text(), 
               href: $(element).attr('href'),
             });
           });
         //   const len = links.length;
         //   console.log(len);
-        //   console.log(links);
-          console.log(links[8]);
+          console.log(links);
+        //   console.log(links[8]);
     }
 });
 
 
 
 
-
+//comments must be removed
 
 
 
