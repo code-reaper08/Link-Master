@@ -1,7 +1,7 @@
 const request = require('request');
 const cheerio = require('cheerio');
 
-request('https://github.com/code-reaper08/markdownpedia/blob/main/README.md', (error,response,html) =>{
+request('https://github.com/code-reaper08/Know-ASCII/blob/main/README.md', (error,response,html) =>{
     if(!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
         const linkObjects = $('#readme > article').children().find('a');
@@ -17,8 +17,16 @@ request('https://github.com/code-reaper08/markdownpedia/blob/main/README.md', (e
           // console.log(links);
           // var arrayLength = myStringArray.length;
           for (let i = 0; i <len ; i++) {
-              console.log("loop running")
-              console.log(links[i]);
+              // console.log("loop running")
+              const hrefs = links[i].href;
+              request(hrefs,(error,response,html) => {
+                if(!error && response.statusCode == 200) {
+                  console.log(hrefs,' Success');
+                }
+                else if(!error && response.statusCode != 200) {
+                  console.log(hrefs,' Failure');
+                }
+              })
     //Do something
 }
         //   console.log(links[8]);
