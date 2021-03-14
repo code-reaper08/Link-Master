@@ -27,9 +27,7 @@ request('https://github.com/code-reaper08/Know-ASCII/blob/main/README.md', (erro
                   console.log(hrefs,' Failure');
                 }
               })
-    //Do something
 }
-        //   console.log(links[8]);
     }
 });
 
