@@ -1,8 +1,8 @@
 const request = require("request");
 const cheerio = require("cheerio");
-
+$(document).ready(function(){
 request(
-  "https://github.com/code-reaper08/MarkdownAssistant/blob/main/README.md",
+  "https://cors-anywhere.herokuapp.com/https://github.com/code-reaper08/MarkdownAssistant/blob/main/README.md",
   (error, response, html) => {
     if (!error && response.statusCode == 200) {
       const $ = cheerio.load(html);
@@ -24,6 +24,8 @@ request(
         request(hrefs, (error, response, html) => {
           if (!error && response.statusCode == 200) {
             console.log(hrefs, " Success");
+            const div = $("#url");
+            div.text("hello");
           } else if (!error && response.statusCode != 200) {
             console.log(hrefs, " Failure");
           }
@@ -32,3 +34,5 @@ request(
     }
   }
 );
+
+});​ 
