@@ -1,7 +1,6 @@
 const request = require("request");
 let storedlink = JSON.parse(localStorage.getItem("all_link"));
 
-const link = document.createElement('h1');
 const body = document.querySelector('body');
 
 const len = storedlink.length;
@@ -13,9 +12,10 @@ for (let i = 0; i < len; i++) {
     request(hrefs, (error, response, html) => {
       if (!error && response.statusCode == 200) {
         console.log(hrefs, " Success");
-        body.append(link);
-        link.innerHTML = hrefs;
-      } else if (!error && response.statusCode != 200) {
+       $("#successlist").append("<li>" +hrefs+ "<span> success </span> </li>");
+      } 
+      else if (!error && response.statusCode != 200) {
+        const failhref = hrefs;
         console.log(hrefs, " Failure");
       }
     });
