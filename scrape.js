@@ -1,8 +1,7 @@
 const request = require("request");
 const cheerio = require("cheerio");
-$(document).ready(function(){
 request(
-  "https://cors-anywhere.herokuapp.com/https://github.com/code-reaper08/MarkdownAssistant/blob/main/README.md",
+  "https://github.com/code-reaper08/MarkdownAssistant/blob/main/README.md",
   (error, response, html) => {
     if (!error && response.statusCode == 200) {
       const $ = cheerio.load(html);
@@ -18,21 +17,31 @@ request(
       //   console.log(len);
       // console.log(links);
       // var arrayLength = myStringArray.length;
-      for (let i = 0; i < len; i++) {
+      // for (let i = 0; i < len; i++) {
+      //   // console.log("loop running")
+      //   const hrefs = links[i].href.replace(/\s\s+/g, "");
+      //   request(hrefs, (error, response, html) => {
+      //     if (!error && response.statusCode == 200) {
+      //       console.log(hrefs, " Success");
+      //     } else if (!error && response.statusCode != 200) {
+      //       console.log(hrefs, " Failure");
+      //     }
+      //   });
+      // }
+      
+       for (let i = 0; i < len; i++) {
         // console.log("loop running")
         const hrefs = links[i].href.replace(/\s\s+/g, "");
         request(hrefs, (error, response, html) => {
           if (!error && response.statusCode == 200) {
-            console.log(hrefs, " Success");
-            const div = $("#url");
-            div.text("hello");
+            // console.log(hrefs, " Success");
           } else if (!error && response.statusCode != 200) {
-            console.log(hrefs, " Failure");
+            // console.log(hrefs, " Failure");
           }
         });
       }
+      // console.log(links);
+      localStorage.setItem("all_link", JSON.stringify(links));
     }
   }
 );
-
-});​ 
