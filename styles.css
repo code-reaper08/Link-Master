@@ -24,6 +24,8 @@ body{
     border-radius: 15px;
     padding: 2px;
     background-color: rgba(0, 128, 0, 0.562);
+    box-shadow: 5px 2px 8px #ddd;
+                
 }
 
 #failspan{
@@ -34,6 +36,7 @@ body{
     border-radius: 15px;
     padding: 2px;
     background-color: rgba(255, 0, 0, 0.712);
+    box-shadow: 5px 2px 8px #ddd;
 }
 
 #sucldiv{
@@ -55,4 +58,13 @@ body{
 
 #listholder{
     padding: 5px 5px 5px 5px;
+}
+
+#sstate{
+    text-align: center;
+    margin-bottom: 10px;
+}
+#fstate{
+    text-align: center;
+    margin-bottom: 10px;
 }
