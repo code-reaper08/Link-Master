@@ -12,13 +12,13 @@ for (let i = 0; i < len; i++) {
     request(hrefs, (error, response, html) => {
       if (!error && response.statusCode == 200) {
         console.log(hrefs, " Success");
-       $("#successlist").append("<li>" +hrefs+ " <span>  Success  </span> </li>")
+       $("#successlist").append("<li>" +hrefs+ " <span>  Success  </span> </li> <br>")
         
       } 
       else if (!error && response.statusCode != 200) {
         const failhref = hrefs;
         console.log(hrefs, " Failure");
-        $("#successlist").append("<li>" +hrefs+ " <span>  Failure  </span> </li>")
+        $("#successlist").append("<li>" +hrefs+ " <span>  Failure  </span> </li> <br>")
       }
     });
   }
