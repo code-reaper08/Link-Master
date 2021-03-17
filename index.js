@@ -1,5 +1,5 @@
 const request = require("request");
-let storedlink = JSON.parse(localStorage.getItem("all_link"));
+let storedlink = JSON.parse(sessionStorage.getItem("all_link"));
 
 const body = document.querySelector('body');
 
@@ -23,4 +23,7 @@ for (let i = 0; i < len; i++) {
   }
 
 // console.log(storedlink);
+sessionStorage.removeItem(storedlink);
+
+
 

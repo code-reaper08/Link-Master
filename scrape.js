@@ -1,7 +1,10 @@
 const request = require("request");
 const cheerio = require("cheerio");
+
+let urllink = sessionStorage.getItem("userlink");
+console.log(urllink);
 request(
-  "https://github.com/code-reaper08/Know-ASCII/blob/main/README.md",
+  urllink,
   (error, response, html) => {
     if (!error && response.statusCode == 200) {
       const $ = cheerio.load(html);
@@ -41,7 +44,9 @@ request(
         });
       }
       // console.log(links);
-      localStorage.setItem("all_link", JSON.stringify(links));
+      sessionStorage.setItem("all_link", JSON.stringify(links));
+      
     }
   }
 );
+sessionStorage.removeItem(urllink);

@@ -9,7 +9,15 @@
 </head>
 <body>
     <div>
-        <input type="text" name="" id="">
+        <form id="search-form">
+            <input type="search"
+            placeholder="Enter your README URL..."
+            id="search-input"
+            required
+            autocomplete="off" 
+            />
+            <button id="search-button">search</button>
+          </form>
     </div>
 
     <div id="listholder">
@@ -20,8 +28,11 @@
 
 
 
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="input.js"></script>
 <script src="bundle.js"></script>
 <script src="indexbundle.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </body>
 </html>
