@@ -186,3 +186,32 @@ box-shadow: inset 22px 12px 24px #c4c4c4,
 #home:hover{
     text-shadow: 2px 2px 6px rgb(110, 109, 109);
 }
+
+#madewithdiv{
+    text-align: center;
+    border-radius: 25px;
+    /* box-shadow: 5px 5px 20px #8d8f92,
+    -7px -7px 20px #ffffff; */
+}
+
+#madewith a{
+    text-decoration: none;
+    color: sienna;
+    font-family: monospace;
+    font-size: large;
+}
+#madewith{
+    font-family: monospace;
+    font-size: large;
+}
+#licdiv{
+    text-align: center;
+}
+#lic{
+    font-family: monospace;
+    color: rgba(255, 140, 0, 0.623);
+    font-size: medium;
+}
+#hrt{
+    color: red;
+}
