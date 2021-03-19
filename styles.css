@@ -205,3 +205,30 @@ box-shadow: inset 22px 12px 24px #c4c4c4,
             inset -12px -12px 24px #d6d6d675;
             border-radius: 40px;
 }
+#drkbtn{
+    text-align: center;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    text-size-adjust: 2px;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(145deg, #f0f0f0, #2b2b2b);
+    box-shadow:  11px 11px 33px #c5c5c5,
+                    -11px -11px 22px #ffffff;
+}
+#drkbtn:hover{
+    background: linear-gradient(145deg, #8a8989, #000000);
+    box-shadow:  11px 11px 33px #c5c5c5,
+                    -11px -11px 22px #ffffff;
+}
+#drkbtn:active{
+    background: linear-gradient(145deg, #f0f0f0, #707070);
+    box-shadow:  inset 11px 11px 33px #c5c5c5,
+                 inset -11px -11px 22px #ffffff;
+}
+
+#drkbtndiv{
+    text-align: right;
+}
