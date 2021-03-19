@@ -3,13 +3,6 @@ dt{
     opacity: 95%;
     word-wrap: break-word;
     font-family:Arial, Helvetica, sans-serif;
-    /* list-style-type: none;
-    margin: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-inline-start: 0; */
 }
 
 body{
@@ -143,10 +136,6 @@ box-shadow: inset 22px 12px 24px #c4c4c4,
     animation-duration: 5000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear; 
-    /* transform: rotate(3deg); */
-        /* transform: rotate(0.3rad);/ */
-        /* transform: rotate(3grad); */ 
-        /* transform: rotate(.03turn);  */
     }
     
     @keyframes spin {
@@ -167,10 +156,6 @@ box-shadow: inset 22px 12px 24px #c4c4c4,
     animation-duration: 5000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear; 
-    /* transform: rotate(3deg); */
-        /* transform: rotate(0.3rad);/ */
-        /* transform: rotate(3grad); */ 
-        /* transform: rotate(.03turn);  */
     }
 #home{
     text-align: center;
@@ -190,8 +175,6 @@ box-shadow: inset 22px 12px 24px #c4c4c4,
 #madewithdiv{
     text-align: center;
     border-radius: 25px;
-    /* box-shadow: 5px 5px 20px #8d8f92,
-    -7px -7px 20px #ffffff; */
 }
 
 #madewith a{
@@ -203,6 +186,7 @@ box-shadow: inset 22px 12px 24px #c4c4c4,
 #madewith{
     font-family: monospace;
     font-size: large;
+    margin-top: 10px;
 }
 #licdiv{
     text-align: center;
@@ -211,7 +195,13 @@ box-shadow: inset 22px 12px 24px #c4c4c4,
     font-family: monospace;
     color: rgba(255, 140, 0, 0.623);
     font-size: medium;
+    margin-bottom: 10px;
 }
 #hrt{
     color: red;
+}
+#lower{
+    box-shadow: inset 12px 22px 24px #f0f0f0,
+            inset -12px -12px 24px #d6d6d675;
+            border-radius: 40px;
 }
