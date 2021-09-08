@@ -37,7 +37,7 @@ Using Link-Master is easy as clicking a button.
 + failure ![masterfailure](https://user-images.githubusercontent.com/64256342/111818256-f8160800-8904-11eb-9e87-8961c1a33422.png)
 
 ## Contributing:
-  This Project is solely done by me. I know it lacks some features and have a lot to optimize. So, contibutions of anyform are welcomed !.
+  This Project is solely done by me. I know it lacks some features and have a lot to optimize. So, contibutions of anyform are welcomed!.
 
 
 **If you like this Project, Be sure to star it .**
